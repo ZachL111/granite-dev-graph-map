@@ -1,0 +1,73 @@
+{
+  "repo": "granite-dev-graph-map",
+  "language": "Rust",
+  "category": "Developer tools",
+  "goal": "Build a Rust toolkit that studies graph behavior through transition tables, with invalid-transition tests and no network dependency.",
+  "review_model": {
+    "terms": [
+      "change width",
+      "diagnostic quality",
+      "review cost",
+      "safe rewrite"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "change width",
+      "signal": 47,
+      "slack": 20,
+      "drag": 10,
+      "confidence": 53,
+      "score": 137,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "diagnostic quality",
+      "signal": 74,
+      "slack": 44,
+      "drag": 24,
+      "confidence": 84,
+      "score": 204,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 49,
+      "slack": 32,
+      "drag": 17,
+      "confidence": 79,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "safe rewrite",
+      "signal": 75,
+      "slack": 51,
+      "drag": 29,
+      "confidence": 66,
+      "score": 180,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "change width",
+      "signal": 80,
+      "slack": 30,
+      "drag": 13,
+      "confidence": 87,
+      "score": 238,
+      "lane": "ship"
+    }
+  ]
+}
