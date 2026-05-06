@@ -1,0 +1,28 @@
+{
+  "repo": "granite-dev-graph-map",
+  "language": "Rust",
+  "category": "Developer tools",
+  "goal": "Build a Rust toolkit that studies graph behavior through transition tables, with invalid-transition tests and no network dependency.",
+  "weights": {
+    "signal": 3,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 174,
+    "watch": 103
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
